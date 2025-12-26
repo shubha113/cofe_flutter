@@ -25,40 +25,50 @@ class _MainNavigationScreenState extends State<MainNavigationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _screens[_currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _currentIndex,
-        onTap: (index) {
-          setState(() {
-            _currentIndex = index;
-          });
-        },
-        type: BottomNavigationBarType.fixed,
-        selectedItemColor: AppConstants.primaryBlue,
-        unselectedItemColor: Colors.grey,
-        selectedFontSize: 12,
-        unselectedFontSize: 12,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_outlined),
-            activeIcon: Icon(Icons.home),
-            label: 'Home',
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          border: Border(
+            top: BorderSide(
+              color: Colors.grey.shade300, // thin divider color
+              width: 0.6,                  // thin line
+            ),
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.phone_android_outlined),
-            activeIcon: Icon(Icons.phone_android),
-            label: "Devices",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.repeat_on_outlined),
-            activeIcon: Icon(Icons.repeat_on),
-            label: 'Routine',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.bar_chart_outlined),
-            activeIcon: Icon(Icons.bar_chart),
-            label: "Stats",
-          ),
-        ],
+        ),
+        child: BottomNavigationBar(
+          currentIndex: _currentIndex,
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
+          type: BottomNavigationBarType.fixed,
+          selectedItemColor: AppConstants.primaryBlue,
+          unselectedItemColor: Colors.grey,
+          selectedFontSize: 12,
+          unselectedFontSize: 12,
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined),
+              activeIcon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.phone_android_outlined),
+              activeIcon: Icon(Icons.phone_android),
+              label: "Devices",
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.repeat_on_outlined),
+              activeIcon: Icon(Icons.repeat_on),
+              label: 'Routine',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.bar_chart_outlined),
+              activeIcon: Icon(Icons.bar_chart),
+              label: "Stats",
+            ),
+          ],
+        ),
       ),
     );
   }
