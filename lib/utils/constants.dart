@@ -8,6 +8,7 @@ class AppConstants {
   static const String registerEndpoint = '/auth/auth/register';
 
   //Colors
-  static const Color primaryBlue = Color(0xFF007AFF);
+  static const Color primaryBlue = Color(0xFF007DFF);
   static const Color secondaryBlue = Color(0xFF4DA3FF);
+  static const Color lightBlue = Color(0x334DA3FF);
 }

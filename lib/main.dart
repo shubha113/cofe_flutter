@@ -1,3 +1,4 @@
+import 'package:Cofe_flutter/screens/main_navigation_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -24,11 +25,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Cofe IoT',
-      initialRoute: isLoggedIn ? '/dashboard' : '/login',
+      initialRoute: isLoggedIn ? '/main' : '/login',
       routes: {
         '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
-        '/dashboard': (context) => const DashboardScreen(),// temporary
+        '/main': (context) => const MainNavigationScreen(),
       },
     );
   }

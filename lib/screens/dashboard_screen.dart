@@ -57,7 +57,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         const Text(
-          'Good Morning, Ensar',
+          'Good Morning, John',
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
@@ -286,7 +286,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: Colors.grey[100],
+        color: AppConstants.lightBlue,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -321,7 +321,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                     );
                   },
-                  activeColor: AppConstants.primaryBlue,
+                  activeThumbColor: AppConstants.primaryBlue,
                 ),
               ),
             ],
