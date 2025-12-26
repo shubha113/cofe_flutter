@@ -9,7 +9,6 @@ class DevicesScreen extends StatefulWidget {
 }
 
 class _DevicesScreenState extends State<DevicesScreen> {
-  // Same device states as dashboard
   final Map<String, bool> deviceStates = {
     'AC': true,
     'Smart TV': true,
@@ -37,22 +36,51 @@ class _DevicesScreenState extends State<DevicesScreen> {
           ),
         ),
       ),
-      body: Padding(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
-        child: GridView.builder(
-          itemCount: deviceStates.length,
-          physics: const BouncingScrollPhysics(),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2,
-            crossAxisSpacing: 16,
-            mainAxisSpacing: 16,
-            childAspectRatio: 0.9,
-          ),
-          itemBuilder: (context, index) {
-            final deviceName = deviceStates.keys.elementAt(index);
-            final isOn = deviceStates[deviceName]!;
-            return _buildDeviceCard(deviceName, isOn);
-          },
+        child: Column(
+          children: [
+            GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              itemCount: deviceStates.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 16,
+                mainAxisSpacing: 16,
+                childAspectRatio: 0.9,
+              ),
+              itemBuilder: (context, index) {
+                final deviceName = deviceStates.keys.elementAt(index);
+                final isOn = deviceStates[deviceName]!;
+                return _buildDeviceCard(deviceName, isOn);
+              },
+            ),
+
+            const SizedBox(height: 24),
+
+            SizedBox(
+              width: double.infinity,
+              height: 56,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppConstants.primaryBlue,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+                onPressed: () {}, // no action
+                child: const Text(
+                  'Add Device',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -104,11 +132,7 @@ class _DevicesScreenState extends State<DevicesScreen> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(
-                deviceIcon,
-                size: 36,
-                color: Colors.black87,
-              ),
+              Icon(deviceIcon, size: 36, color: Colors.black87),
               Transform.scale(
                 scale: 0.8,
                 child: Switch(
@@ -148,10 +172,7 @@ class _DevicesScreenState extends State<DevicesScreen> {
               const SizedBox(height: 4),
               Text(
                 'Living Room',
-                style: TextStyle(
-                  fontSize: 13,
-                  color: Colors.grey[600],
-                ),
+                style: TextStyle(fontSize: 13, color: Colors.grey[600]),
               ),
             ],
           ),
