@@ -77,7 +77,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Container(
       padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: AppConstants.primaryBlue,
+        color: AppConstants.primaryRed,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Row(
@@ -183,7 +183,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppConstants.primaryBlue,
+        color: AppConstants.primaryRed,
         borderRadius: BorderRadius.circular(12),
       ),
       child: Column(
@@ -286,7 +286,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppConstants.lightBlue,
+        color: AppConstants.secondaryRed,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -321,7 +321,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                       ),
                     );
                   },
-                  activeThumbColor: AppConstants.primaryBlue,
+                  activeThumbColor: AppConstants.primaryRed,
                 ),
               ),
             ],
@@ -344,7 +344,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                 'Living Room',
                 style: TextStyle(
                   fontSize: 13,
-                  color: Colors.grey[600],
+                  color: Colors.grey[900],
                 ),
               ),
             ],

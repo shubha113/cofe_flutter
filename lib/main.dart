@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      title: 'Cofe IoT',
+      title: 'Cofee RND',
       initialRoute: isLoggedIn ? '/main' : '/login',
       routes: {
         '/login': (context) => const LoginScreen(),

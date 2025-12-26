@@ -64,7 +64,7 @@ class _DevicesScreenState extends State<DevicesScreen> {
               height: 56,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: AppConstants.primaryBlue,
+                  backgroundColor: AppConstants.primaryRed,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(16),
                   ),
@@ -121,7 +121,7 @@ class _DevicesScreenState extends State<DevicesScreen> {
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        color: AppConstants.lightBlue,
+        color: AppConstants.secondaryRed,
         borderRadius: BorderRadius.circular(16),
       ),
       child: Column(
@@ -151,7 +151,7 @@ class _DevicesScreenState extends State<DevicesScreen> {
                       ),
                     );
                   },
-                  activeThumbColor: AppConstants.primaryBlue,
+                  activeThumbColor: AppConstants.primaryRed,
                 ),
               ),
             ],

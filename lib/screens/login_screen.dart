@@ -72,18 +72,23 @@ class _LoginScreenState extends State<LoginScreen> {
                 width: 60,
                 height: 60,
                 decoration: BoxDecoration(
-                  color: AppConstants.primaryBlue.withValues(alpha: 26),
                   shape: BoxShape.circle,
+                ),
+                child: Image.asset(
+                  'assets/cofee.png',
+                  width: 100,
+                  height: 100,
+                  fit: BoxFit.contain,
                 ),
               ),
               const SizedBox(height: 12),
 
               const Text(
-                'Cofe',
+                'Cofee RND',
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
-                  color: AppConstants.primaryBlue,
+                  color: AppConstants.primaryRed,
                 ),
               ),
               const SizedBox(height: 48),
@@ -94,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
-                  color: AppConstants.secondaryBlue,
+                  color: AppConstants.secondaryRed,
                 ),
               ),
               const SizedBox(height: 32),
@@ -115,7 +120,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextField(
                     controller: _emailController,
                     keyboardType: TextInputType.emailAddress,
-                    cursorColor: AppConstants.primaryBlue,
+                    cursorColor: AppConstants.primaryRed,
                     decoration: InputDecoration(
                       hintText: 'Enter your email',
                       filled: true,
@@ -148,7 +153,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: const BorderSide(
-                          color: AppConstants.primaryBlue,
+                          color: AppConstants.primaryRed,
                           width: 2,
                         ),
                       ),
@@ -175,7 +180,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextField(
                     controller: _passwordController,
                     obscureText: true,
-                    cursorColor: AppConstants.primaryBlue,
+                    cursorColor: AppConstants.primaryRed,
                     decoration: InputDecoration(
                       hintText: 'Enter your password',
                       filled: true,
@@ -208,7 +213,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: const BorderSide(
-                          color: AppConstants.primaryBlue,
+                          color: AppConstants.primaryRed,
                           width: 2,
                         ),
                       ),
@@ -226,7 +231,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: ElevatedButton(
                   onPressed: _isLoading ? null : _handleLogin,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: AppConstants.primaryBlue,
+                    backgroundColor: AppConstants.primaryRed,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -265,7 +270,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Text(
                       'Sign up',
                       style: TextStyle(
-                        color: AppConstants.primaryBlue,
+                        color: AppConstants.primaryRed,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

@@ -53,7 +53,7 @@ class RoutineScreen extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 8, bottom: 24),
                 child: CircleAvatar(
                   radius: 28,
-                  backgroundColor: AppConstants.primaryBlue,
+                  backgroundColor: AppConstants.primaryRed,
                   child: const Icon(
                     Icons.add,
                     size: 28,
